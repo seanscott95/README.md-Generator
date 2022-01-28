@@ -19,69 +19,76 @@
     const fs = require("fs");
     const inquirer = require("inquirer");
 // TODO: Create an array of questions for user input
-const questions = [
-    {
-      type: 'input',
-      name: 'repository',
-      message: 'Where do you want your file saved?',
-    },
-    {
-      type: 'input',
-      name: 'title',
-      message: 'What do you want the title of your biography to be?',
-    },
-    {
-      type: 'input',
-      name: 'describe',
-      message: 'Describe your application.',
-    },
-    {
-      type: 'input',
-      name: 'installation-instructions',
-      message: 'Describe the installation instructions.',
-    },
-    {
-      type: 'input',
-      name: 'usage-information',
-      message: 'Describe the usage information',
-    },
-    {
-      type: 'input',
-      name: 'contribution',
-      message: 'Describe the contribution guidelines.',
-    },
-    {
-      type: 'input',
-      name: 'test-instructions',
-      message: 'Describe the test instructions.',
-    },
-    {
-      type: 'list',
-      name: 'license',
-      message: 'What license is the application covered under?',
-      choices: ["Apache License 2.0", "BSD 3-Clause - New or Revised License",
-      "BSD 2-Clause - Simplified or FreeBSD License", "GNU General Public License (GPL)",
-      "GNU Library or Lesser General Public License (LGPL)", "MIT License", "Mozilla Public License 2.0", 
-      "Common Development and Distribution License", "Eclipse Public License Version 2.0"]
-    },
-    {
-      type: 'input',
-      name: 'github',
-      message: 'What is your github username?',
-    },
-    {
-      type: 'input',
-      name: 'email',
-      message: 'What is your email address?',
-    }
-];
+const questions = ['What do you want the title of your biography to be?', 'Describe your application.', 
+'Describe the installation instructions.', 'Describe the usage information', 
+'Describe the contribution guidelines.', 'Describe the test instructions.', 
+'What license is the application covered under?', 'What is your github username?', 
+'What is your email address?'];
 
 // TODO: Create a function to write README file
+
+
 function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'title',
+            message: questions[0],
+        },
+        {
+            type: 'input',
+            name: 'describe',
+            message: questions[1],
+        },
+        {
+            type: 'input',
+            name: 'installation-instructions',
+            message: questions[2],
+        },
+        {
+            type: 'input',
+            name: 'usage-information',
+            message: questions[3],
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: questions[4],
+        },
+        {
+            type: 'input',
+            name: 'test-instructions',
+            message: questions[5],
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: questions[6],
+            choices: ["Apache License 2.0", "BSD 3-Clause - New or Revised License",
+            "BSD 2-Clause - Simplified or FreeBSD License", "GNU General Public License (GPL)",
+            "GNU Library or Lesser General Public License (LGPL)", "MIT License", "Mozilla Public License 2.0", 
+            "Common Development and Distribution License", "Eclipse Public License Version 2.0"]
+       },
+       {
+         type: 'input',
+         name: 'github',
+         message: questions[7],
+       },
+       {
+         type: 'input',
+         name: 'email',
+         message: questions[8],
+       }
+    ])
+    .then((data) => {
+        const fileName = "README.md";
+        writeToFile(fileName, data);
+    });
+}       
 
 // Function call to initialize app
 init();
