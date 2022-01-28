@@ -14,7 +14,8 @@
 // Make the links in the Table of Contents take you to the corresponding section of the README
 
 // TODO: Include packages needed for this application
-
+    const fs = require("fs");
+    const inquirer = require("inquirer");
 // TODO: Create an array of questions for user input
 const questions = [];
 
