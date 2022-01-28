@@ -31,7 +31,13 @@ const questions = ['What do you want the title of your biography to be?', 'Descr
 
 
 function writeToFile(fileName, data) {
-
+    const mdText = `
+    # ${data.title} ${markdown.renderLicenseBadge(data.license)}\n
+    ## Description ${data.description}\n
+    `;
+    fs.writeFile(fileName, mdText, (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
 }
 
 // TODO: Create a function to initialize app
