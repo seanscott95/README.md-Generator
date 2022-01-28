@@ -18,6 +18,8 @@
 // TODO: Include packages needed for this application
     const fs = require("fs");
     const inquirer = require("inquirer");
+    const markdown = require("./utils/generateMarkdown");
+
 // TODO: Create an array of questions for user input
 const questions = ['What do you want the title of your biography to be?', 'Describe your application.', 
 'Describe the installation instructions.', 'Describe the usage information', 
@@ -29,6 +31,7 @@ const questions = ['What do you want the title of your biography to be?', 'Descr
 
 
 function writeToFile(fileName, data) {
+
 }
 
 // TODO: Create a function to initialize app
