@@ -33,7 +33,20 @@ const questions = ['What do you want the title of your biography to be?', 'Descr
 function writeToFile(fileName, data) {
     const mdText = `
     # ${data.title} ${markdown.renderLicenseBadge(data.license)}\n
-    ## Description ${data.description}\n
+    ## Description \n ${data.description}\n
+    ## Table of Contents
+    [Installation](#Installation)
+    [Usage](#Usage)
+    [Contribution](#Contribution)
+    [Tests](#Tests)\n
+    ## Installation \n ${data.installation-instructions}\n
+    ## Usage \n ${data.usage-information} \n
+    ## License \n This application is covered under the ${markdown.renderLicenseLink(data.license)} \n
+    ## Contributing \n ${data.contribution} \n
+    ## Tests \n ${data.test-instructions} \n
+    ## Questions \n To reach me with additional questions please contact me via one of the following methods: \n 
+    [GitHub](https://github.com/${data.github}) \n
+    [Email](${data.email}) \n
     `;
     fs.writeFile(fileName, mdText, (err) =>
       err ? console.log(err) : console.log('Success!')
