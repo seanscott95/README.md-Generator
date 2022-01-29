@@ -21,60 +21,61 @@
     const markdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = ['What do you want the title of your biography to be?', 'Describe your application.', 
+const questions = ['What do you want the title of your application to be?', 'Describe your application.', 
 'Describe the installation instructions.', 'Describe the usage information', 
 'Describe the contribution guidelines.', 'Describe the test instructions.', 
 'What license is the application covered under?', 'What is your github username?', 
 'What is your email address?'];
 
 // TODO: Create a function to write README file
-
+// ${markdown.renderLicenseBadge(data.license)}
+// ${markdown.renderLicenseLink(data.license)}
 
 function writeToFile(fileName, data) {
     const mdText = `
-    # ${data.title} ${markdown.renderLicenseBadge(data.license)}
+# ${data.title}  
 
-    ## Description 
-    <p>${data.description}<p>
+## Description insertFunctionHere
+<p>${data.description}<p>
     
-    ---
-    ## Table of Contents 
-    - [Installation](#Installation)
-    - [Usage](#Usage)
-    - [License](#License)
-    - [Contribution](#Contribution)
-    - [Tests](#Tests)
-    - [Questions](#Questions)
-    
-    ---
-    ## Installation
-    <p>${data.installation-instructions}<p> 
-    
-    ---
-    ## Usage
-    <p>${data.usage-information}</p>
-    
-    ---
-    ## License
-    <p>This application is covered under the ${markdown.renderLicenseLink(data.license)}
-    </p> 
-    
-    ---
-    ## Contributing
-    <p>${data.contribution}</p>
-    
-    ---
-    ## Tests 
-    <p>${data.test-instructions} </p>
-    
-    ---
-    ## Questions
-    <p> To reach me with additional questions please contact me via one of the following methods: </p>
-    
-    - Link: [GitHub](https://github.com/${data.github})
-    - Link: [Email](${data.email})
-    `;
-    fs.writeFile(fileName, mdText, (err) =>
+---
+## Table of Contents 
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contribution](#Contribution)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+---
+## Installation 
+<p>${data.installation}<p> 
+
+---
+## Usage 
+<p>${data.usage}</p>
+
+---
+## License 
+<p>This application is covered under the insertFunctionHere
+</p> 
+
+---
+## Contributing 
+<p>${data.contribution}</p>
+
+---
+## Tests 
+<p>${data.test} </p>
+
+---
+## Questions 
+<p> To reach me with additional questions please contact me via one of the following methods: </p>
+
+- Link: [GitHub](https://github.com/${data.github})
+- Link: [Email](${data.email})
+`;
+fs.writeFile(fileName, mdText, (err) =>
       err ? console.log(err) : console.log('Success!')
     );
 }
@@ -94,12 +95,12 @@ function init() {
         },
         {
             type: 'input',
-            name: 'installation-instructions',
+            name: 'installation',
             message: questions[2],
         },
         {
             type: 'input',
-            name: 'usage-information',
+            name: 'usage',
             message: questions[3],
         },
         {
@@ -109,7 +110,7 @@ function init() {
         },
         {
             type: 'input',
-            name: 'test-instructions',
+            name: 'test',
             message: questions[5],
         },
         {
