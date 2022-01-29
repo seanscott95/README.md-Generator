@@ -68,14 +68,54 @@ function renderLicenseSection(license) {
   if (!license) {
     return "";
   } else {
-    return license;
+    return `This application is covered under the ${renderLicenseLink(license)}`;
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
+  return `
+  # ${data.title} ${renderLicenseBadge(data.license)}
+  
+  ## Description insertFunctionHere
+  <p>${data.description}<p>
+      
+  ---
+  ## Table of Contents 
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contribution](#Contribution)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
+  
+  ---
+  ## Installation 
+  <p>${data.installation}<p> 
+  
+  ---
+  ## Usage 
+  <p>${data.usage}</p>
+  
+  ---
+  ## License 
+  <p> ${renderLicenseSection(data.license)}
+  </p> 
+  
+  ---
+  ## Contributing 
+  <p>${data.contribution}</p>
+  
+  ---
+  ## Tests 
+  <p>${data.test} </p>
+  
+  ---
+  ## Questions 
+  <p> To reach me with additional questions please contact me via one of the following methods: </p>
+  
+  - Link: [GitHub](https://github.com/${data.github})
+  - Link: [Email](${data.email})  
 `;
 }
 
