@@ -120,7 +120,8 @@ function init() {
             choices: ["Apache License 2.0", "BSD 3-Clause - New or Revised License",
             "BSD 2-Clause - Simplified or FreeBSD License", "GNU General Public License (GPL)",
             "GNU Library or Lesser General Public License (LGPL)", "MIT License", "Mozilla Public License 2.0", 
-            "Common Development and Distribution License", "Eclipse Public License Version 2.0"]
+            "Boost Software License 1.0", "Eclipse Public License Version 2.0", "IBM Public License Version 1.0", 
+            "ISC License (ISC)"]
        },
        {
          type: 'input',
