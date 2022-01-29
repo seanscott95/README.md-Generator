@@ -36,7 +36,29 @@ function renderLicenseLink(license) {
   if (!license) {
     return "";
   } else {
-    return license;
+    if (license === "Apache License 2.0") {
+      return `License: Apache 2.0 - [https://opensource.org/licenses/Apache-2.0](https://opensource.org/licenses/Apache-2.0)`;
+    } else if (license === "BSD 3-Clause - New or Revised License") {
+      return `License: BSD 3-Clause - [https://opensource.org/licenses/BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)`;
+    } else if (license === "BSD 2-Clause - Simplified or FreeBSD License") {
+      return `License: BSD 2-Clause - [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)`;
+    } else if (license === "GNU General Public License (GPL)") {
+      return `License: GPL v3 - [https://www.gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses/gpl-3.0)`;
+    } else if (license === "GNU Library or Lesser General Public License (LGPL)") {
+      return `License: LGPL v3 - [https://www.gnu.org/licenses/lgpl-3.0](https://www.gnu.org/licenses/lgpl-3.0)`;
+    } else if (license === "MIT License") {
+      return `License: MIT - [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)`;
+    } else if (license === "Mozilla Public License 2.0") {
+      return `License: MPL 2.0 - [https://opensource.org/licenses/MPL-2.0](https://opensource.org/licenses/MPL-2.0)`;
+    } else if (license === "Boost Software License 1.0") {
+      return `License: BSL 1.0 - [https://www.boost.org/LICENSE_1_0.txt](https://www.boost.org/LICENSE_1_0.txt)`;
+    } else if (license === "Eclipse Public License Version 2.0") {
+      return `License: EPL-1.0 - [https://opensource.org/licenses/EPL-1.0](https://opensource.org/licenses/EPL-1.0)`;
+    } else if (license === "IBM Public License Version 1.0") {
+      return `License: IPL 1.0 - [https://opensource.org/licenses/IPL-1.0](https://opensource.org/licenses/IPL-1.0)`;
+    } else if (license === "ISC License (ISC)") {
+      return `License: ISC - [https://opensource.org/licenses/ISC](https://opensource.org/licenses/ISC)`;
+    };
   }
 }
 
