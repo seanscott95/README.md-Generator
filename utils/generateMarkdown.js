@@ -37,7 +37,7 @@ function renderLicenseLink(license) {
     return "";
   } else {
     if (license === "Apache License 2.0") {
-      return "License: Apache License 2.0 -  https://opensource.org/licenses/Apache-2.0";
+      return "License: Apache License 2.0 - https://opensource.org/licenses/Apache-2.0";
     } else if (license === "BSD 3-Clause - New or Revised License") {
       return "License: BSD 3-Clause / New or Revised License - https://opensource.org/licenses/BSD-3-Clause)";
     } else if (license === "BSD 2-Clause - Simplified or FreeBSD License") {
@@ -75,47 +75,47 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title} ${renderLicenseBadge(data.license)}
-  
-  ## Description 
-  <p>${data.description}<p>
-      
-  ---
-  ## Table of Contents 
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contribution](#Contribution)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
-  
-  ---
-  ## Installation 
-  <p>${data.installation}<p> 
-  
-  ---
-  ## Usage 
-  <p>${data.usage}</p>
-  
-  ---
-  ## License 
-  <p> ${renderLicenseSection(data.license)}
-  </p> 
-  
-  ---
-  ## Contribution 
-  <p>${data.contribution}</p>
-  
-  ---
-  ## Tests 
-  <p>${data.test} </p>
-  
-  ---
-  ## Questions 
-  <p> To reach me with additional questions please contact me via one of the following methods: </p>
-  
-  - Link: [GitHub](https://github.com/${data.github})
-  - Link: [Email](${data.email})  
+# ${data.title} ${renderLicenseBadge(data.license)}
+
+## Description 
+<p>${data.description}<p>
+    
+---
+## Table of Contents 
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contribution](#Contribution)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+---
+## Installation 
+<p>${data.installation}<p> 
+
+---
+## Usage 
+<p>${data.usage}</p>
+
+---
+## License 
+<p> ${renderLicenseSection(data.license)}
+</p> 
+
+---
+## Contribution 
+<p>${data.contribution}</p>
+
+---
+## Tests 
+<p>${data.test} </p>
+
+---
+## Questions 
+<p> To reach me with additional questions please contact me via one of the following methods: </p>
+
+- Link: [GitHub](https://github.com/${data.github})
+- Link: [Email](${data.email})  
 `;
 }
 

@@ -11,9 +11,6 @@ const questions = ['What do you want the title of your application to be?', 'Des
 'What is your email address?'];
 
 // TODO: Create a function to write README file
-
-
-
 function writeToFile(fileName, data) {
 fs.writeFile(fileName, generateMarkdown(data), (err) =>
       err ? console.log(err) : console.log('Success!')
@@ -30,7 +27,7 @@ function init() {
         },
         {
             type: 'input',
-            name: 'describe',
+            name: 'description',
             message: questions[1],
         },
         {
