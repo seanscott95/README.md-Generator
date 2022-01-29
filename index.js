@@ -32,21 +32,47 @@ const questions = ['What do you want the title of your biography to be?', 'Descr
 
 function writeToFile(fileName, data) {
     const mdText = `
-    # ${data.title} ${markdown.renderLicenseBadge(data.license)}\n
-    ## Description \n ${data.description}\n
-    ## Table of Contents
-    [Installation](#Installation)
-    [Usage](#Usage)
-    [Contribution](#Contribution)
-    [Tests](#Tests)\n
-    ## Installation \n ${data.installation-instructions}\n
-    ## Usage \n ${data.usage-information} \n
-    ## License \n This application is covered under the ${markdown.renderLicenseLink(data.license)} \n
-    ## Contributing \n ${data.contribution} \n
-    ## Tests \n ${data.test-instructions} \n
-    ## Questions \n To reach me with additional questions please contact me via one of the following methods: \n 
-    [GitHub](https://github.com/${data.github}) \n
-    [Email](${data.email}) \n
+    # ${data.title} ${markdown.renderLicenseBadge(data.license)}
+
+    ## Description 
+    <p>${data.description}<p>
+    
+    ---
+    ## Table of Contents 
+    - [Installation](#Installation)
+    - [Usage](#Usage)
+    - [License](#License)
+    - [Contribution](#Contribution)
+    - [Tests](#Tests)
+    - [Questions](#Questions)
+    
+    ---
+    ## Installation
+    <p>${data.installation-instructions}<p> 
+    
+    ---
+    ## Usage
+    <p>${data.usage-information}</p>
+    
+    ---
+    ## License
+    <p>This application is covered under the ${markdown.renderLicenseLink(data.license)}
+    </p> 
+    
+    ---
+    ## Contributing
+    <p>${data.contribution}</p>
+    
+    ---
+    ## Tests 
+    <p>${data.test-instructions} </p>
+    
+    ---
+    ## Questions
+    <p> To reach me with additional questions please contact me via one of the following methods: </p>
+    
+    - Link: [GitHub](https://github.com/${data.github})
+    - Link: [Email](${data.email})
     `;
     fs.writeFile(fileName, mdText, (err) =>
       err ? console.log(err) : console.log('Success!')
