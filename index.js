@@ -1,25 +1,7 @@
-// TODO: 
-// Using a command-line application that accepts user input that prompts for information about an application
-// repository that generates a README.md with the following sections
-//      Title of the project
-//      Sections: entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests,
-//      and Questions
-// Prompt for info for the following sections: description, installation instructions, usage information,
-// contribution guidelines, and test instructions
-// The title of the project will be the title of the README generated
-// Have a list of options for the license choice that adds a badge for that license near the top of the README
-// and add a notice to the License section that explains which license the application is covered under
-// Prompt for the GitHub username and ass to the section of the README entitled Questions, with a link to the
-// GitHub profile
-// Prompt for an email address and add it to the section of the README entitled Questions, with instructions on
-// how to reach me with additional questions
-// Make the links in the Table of Contents take you to the corresponding section of the README
-
 // TODO: Include packages needed for this application
     const fs = require("fs");
     const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
-    const markdown = require("./utils/generateMarkdown");
+    const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = ['What do you want the title of your application to be?', 'Describe your application.', 
@@ -93,8 +75,7 @@ function init() {
        }
     ])
     .then((data) => {
-        const fileName = "README.md";
-        writeToFile(fileName, data);
+        writeToFile("README.md", data);
     });
 }       
 
