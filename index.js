@@ -4,11 +4,13 @@
     const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = ['What do you want the title of your application to be?', 'Describe your application.', 
-'Describe the installation instructions.', 'Describe the usage information', 
-'Describe the contribution guidelines.', 'Describe the test instructions.', 
-'What license is the application covered under?', 'What is your github username?', 
-'What is your email address?'];
+const questions = ['What would you like the title of your project to be?', 'Please describe your application.', 
+'Please describe the installation instructions for a user to use your application.', 
+'Please describe the usage information on how the user can use your application', 
+'Please describe who contributed to this project.', 
+'Please describe the test instructions on how a user can use your application.', 
+'What license is the application covered under?', 'Please enter your github username?', 
+'Please enter your email address?'];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {

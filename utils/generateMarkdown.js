@@ -68,7 +68,7 @@ function renderLicenseSection(license) {
   if (!license) {
     return "";
   } else {
-    return `This application is covered under the ${renderLicenseLink(license)}`;
+    return `This application is covered under the: ${renderLicenseLink(license)}`;
   }
 }
 
@@ -89,20 +89,20 @@ function generateMarkdown(data) {
 - [Questions](#Questions)
 
 ## Installation 
-<p>${data.installation}<p> 
+<p>To install this application please follow these instructions: ${data.installation}<p> 
 
 ## Usage 
-<p>${data.usage}</p>
+<p>To use this application please please follow these instructions: ${data.usage}</p>
 
 ## License 
 <p> ${renderLicenseSection(data.license)}
 </p> 
 
 ## Contribution 
-<p>${data.contribution}</p>
+<p> ${data.contribution}</p>
 
 ## Tests 
-<p>${data.test} </p>
+<p> To test this application please follow these instuctions: ${data.test} </p>
 
 ## Questions 
 <p> To reach me with additional questions please contact me via one of the following methods: </p>
