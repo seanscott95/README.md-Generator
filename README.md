@@ -30,5 +30,6 @@
 ## Questions 
 <p> To reach me with additional questions please contact me via one of the following methods: </p>
 
-- Link: [GitHub](https://github.com/seanscott95)
-- Link: [Email](mailto:seanms418@gmail.com) 
+- Link: [GitHub](https://github.com/seanscott95/README.md-Generator)
+- Link: [Email](mailto:seanms418@gmail.com)
+- Link: [Video-Demo](./Assets/README-Generator.webm)
