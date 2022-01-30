@@ -80,7 +80,6 @@ function generateMarkdown(data) {
 ## Description 
 <p>${data.description}<p>
     
----
 ## Table of Contents 
 - [Installation](#Installation)
 - [Usage](#Usage)
@@ -89,28 +88,22 @@ function generateMarkdown(data) {
 - [Tests](#Tests)
 - [Questions](#Questions)
 
----
 ## Installation 
 <p>${data.installation}<p> 
 
----
 ## Usage 
 <p>${data.usage}</p>
 
----
 ## License 
 <p> ${renderLicenseSection(data.license)}
 </p> 
 
----
 ## Contribution 
 <p>${data.contribution}</p>
 
----
 ## Tests 
 <p>${data.test} </p>
 
----
 ## Questions 
 <p> To reach me with additional questions please contact me via one of the following methods: </p>
 
