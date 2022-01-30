@@ -107,7 +107,7 @@ function generateMarkdown(data) {
 <p> To reach me with additional questions please contact me via one of the following methods: </p>
 
 - Link: [GitHub](https://github.com/${data.github})
-- Link: [Email](${data.email}) 
+- Link: [Email](mailto:${data.email}) 
 `;
 }
 
