@@ -32,4 +32,4 @@
 
 - Link: [GitHub](https://github.com/seanscott95/README.md-Generator)
 - Link: [Email](mailto:seanms418@gmail.com)
-- Link: [Video-Demo](./Assets/README-Generator.webm)
+- Link: [Video-Demo](https://drive.google.com/file/d/1CIWfPbNE0jpOIYyoq0hwRDOS2hhYvTTe/view)
